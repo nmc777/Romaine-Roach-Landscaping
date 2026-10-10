@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Landscaping, Lawn Care & Snow Removal in Tecumseh & Windsor-Essex | AI The Yard Guy',
+  title: 'Landscaping, Lawn Care & Snow Removal in Tecumseh & Windsor-Essex | R.R Landscaping',
   description: 'Distinctive gardens and considered outdoor spaces for homes across Windsor-Essex, including Windsor, Tecumseh, LaSalle, Amherstburg, Essex, Kingsville and Leamington.',
   keywords: ['landscaping services Tecumseh ON', 'lawn care maintenance', 'sod installation near me', 'backyard renovation Windsor-Essex', 'garden design and planting', 'snow removal Windsor-Essex'],
   generator: 'v0.app',

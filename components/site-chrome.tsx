@@ -14,7 +14,7 @@ export function SiteNav() {
     <>
     <div className="top-bar">Proudly serving Windsor-Essex</div>
     <nav className="nav-wrap" aria-label="Main navigation">
-      <Link className="brand" href="/" onClick={close} aria-label="AI The Yard Guy home"><span className="brand-mark">AI</span><span>THE YARD GUY</span></Link>
+      <Link className="brand" href="/" onClick={close} aria-label="R.R Landscaping home"><span className="brand-mark">RR</span><span>LANDSCAPING</span></Link>
       <div className={`nav-links ${menuOpen ? 'nav-links-open' : ''}`}>
         <div className={`services-menu ${servicesOpen ? 'services-menu-open' : ''}`} onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
           <button className="services-menu-trigger" onClick={() => setServicesOpen(!servicesOpen)} aria-haspopup="true" aria-expanded={servicesOpen}>Services <ChevronDown size={13} /></button>
@@ -37,12 +37,12 @@ export function SiteFooter() {
   return (
     <footer>
       <div className="footer-top">
-        <div className="footer-brand"><div className="brand"><span className="brand-mark">AI</span><span>THE YARD GUY</span></div><p>Thoughtful landscaping for considered homes across Windsor-Essex.</p></div>
+        <div className="footer-brand"><div className="brand"><span className="brand-mark">RR</span><span>LANDSCAPING</span></div><p>Thoughtful landscaping for considered homes across Windsor-Essex.</p></div>
         <div className="footer-col"><h4>Services</h4>{services.map((s) => <Link key={s.slug} href={`/services/${s.slug}`}>{s.name}</Link>)}</div>
         <div className="footer-col"><h4>Company</h4><Link href="/">Home</Link><Link href="/#story">Our approach</Link><Link href="/#areas">Areas we serve</Link><Link href="/#contact">Contact</Link></div>
         <div className="footer-col"><h4>Get in touch</h4><a href="mailto:hello@aitheyardguy.ca">hello@aitheyardguy.ca</a><span>Windsor-Essex, Ontario</span></div>
       </div>
-      <div className="footer-bottom"><span className="footer-copy">© 2026 AI The Yard Guy</span><span className="footer-copy">Est. 2023</span></div>
+      <div className="footer-bottom"><span className="footer-copy">© 2026 R.R Landscaping</span><span className="footer-copy">Est. 2023</span></div>
     </footer>
   )
 }

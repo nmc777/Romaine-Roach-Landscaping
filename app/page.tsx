@@ -55,7 +55,7 @@ export default function Page() {
         <div className="story-panel">
           <p className="eyebrow light">OUR APPROACH</p>
           <h2 id="story-heading">Rooted in<br /><em>the community.</em></h2>
-          <p className="story-lead">For more than five years, AI The Yard Guy has helped neighbours across Windsor-Essex feel proud of where they live.</p>
+          <p className="story-lead">For more than five years, R.R Landscaping has helped neighbours across Windsor-Essex feel proud of where they live.</p>
           <p className="story-body">From the first tidy-up of spring to the last snowfall of winter, we bring dependable care, honest communication, and a sharp eye for the details that make an outdoor space feel like yours.</p>
           <div className="story-stats"><div><strong>5+</strong><span>Years serving our community</span></div><div><strong>100%</strong><span>Care in every visit</span></div></div>
           <Link className="button button-light" href="/#contact">Get a free quote <ArrowRight size={17} /></Link>
@@ -65,10 +65,10 @@ export default function Page() {
             <section className="areas-section" id="areas" aria-labelledby="areas-heading">
         <div className="areas-grid">
           <div><p className="eyebrow">AREAS WE SERVE</p><h2 id="areas-heading">Proudly local to<br /><em>Windsor-Essex.</em></h2></div>
-          <div className="areas-copy"><p>AI The Yard Guy is a local landscaping and yard care company serving homeowners across Windsor-Essex. We work in {areaList}, and the communities in between.</p><p>Being local means we know the area: the soil, the seasons, and the lake-effect weather that shapes how a yard should be looked after. If you are not sure whether we cover your street, just ask.</p></div>
+          <div className="areas-copy"><p>R.R Landscaping is a local landscaping and yard care company serving homeowners across Windsor-Essex. We work in {areaList}, and the communities in between.</p><p>Being local means we know the area: the soil, the seasons, and the lake-effect weather that shapes how a yard should be looked after. If you are not sure whether we cover your street, just ask.</p></div>
         </div>
         <div className="areas-list">{areas.map((a) => <div className="area-card" key={a.name}><h3>{a.name}</h3><p>{a.note}</p></div>)}</div>
-              <div className="map-wrap"><iframe title="AI The Yard Guy service area map, Tecumseh and Windsor-Essex" src={MAP_EMBED} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /><a className="map-link" href={MAP_LINK} target="_blank" rel="noopener noreferrer">Open in Google Maps <ArrowRight size={14} /></a></div>
+              <div className="map-wrap"><iframe title="R.R Landscaping service area map, Tecumseh and Windsor-Essex" src={MAP_EMBED} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /><a className="map-link" href={MAP_LINK} target="_blank" rel="noopener noreferrer">Open in Google Maps <ArrowRight size={14} /></a></div>
       </section>
 
       <section className="reviews-section" aria-labelledby="reviews-heading">
@@ -89,12 +89,12 @@ export default function Page() {
         <div className="booking-card"><div className="booking-top"><div><p className="eyebrow">CONTACT NOW</p><h3>Choose a time</h3></div><CalendarDays size={22} /></div><div className="booking-month"><button aria-label="Previous month"><ChevronLeft size={16} /></button><strong>October 2026</strong><button aria-label="Next month"><ChevronRight size={16} /></button></div><div className="weekdays">{days.map(day => <span key={day}>{day}</span>)}</div><div className="calendar-grid">{dates.map((date, i) => date < 1 || date > 31 ? <span key={i} className="empty-date" /> : <button key={i} className={`date-cell ${date === selectedDate ? 'selected' : ''} ${[3, 8, 17, 24].includes(date) ? 'unavailable' : ''}`} onClick={() => setSelectedDate(date)} disabled={[3, 8, 17, 24].includes(date)}>{date}</button>)}</div><div className="time-title"><Clock3 size={15} /> Available times</div><div className="time-grid">{times.map(time => <button key={time} className={time === selectedTime ? 'time-selected' : ''} onClick={() => setSelectedTime(time)}>{time}</button>)}</div><button className="button button-dark booking-button" onClick={() => alert(`Dummy booking held for October ${selectedDate}, 2026 at ${selectedTime}.`)}>Continue <ArrowRight size={16} /></button><p className="dummy-note">Demo calendar · no real booking will be made</p></div>
       </section>
 
-      <section className="quote-section"><div className="quote-mark">“</div><blockquote>It is not about making a yard look perfect. It is about making it feel like yours.</blockquote><p>— AI THE YARD GUY</p></section>
+      <section className="quote-section"><div className="quote-mark">“</div><blockquote>It is not about making a yard look perfect. It is about making it feel like yours.</blockquote><p>— R.R LANDSCAPING</p></section>
 
       <SiteFooter />
 
       <button className="chat-trigger" onClick={() => setChatOpen(!chatOpen)} aria-label="Open chat"><MessageCircle size={21} /></button>
-      {chatOpen && <div className="chat-window"><div className="chat-head"><div><strong>AI The Yard Guy</strong><span>Usually replies instantly</span></div><button onClick={() => setChatOpen(false)} aria-label="Close chat"><X size={17} /></button></div><div className="chat-body"><div className="chat-bubble">Hi there. How can we help make your outdoor space feel more like you?</div>{sent && <div className="chat-bubble user-bubble">{message}</div>}</div><div className="chat-compose"><input value={message} onChange={e => setMessage(e.target.value)} onKeyDown={e => { if (e.key === 'Enter' && !e.nativeEvent.isComposing && e.keyCode !== 229 && message.trim()) { setSent(true); setMessage('') } }} placeholder="Type a message..." aria-label="Chat message" /><button onClick={() => { if (message.trim()) { setSent(true); setMessage('') } }} aria-label="Send message"><Send size={16} /></button></div></div>}
+      {chatOpen && <div className="chat-window"><div className="chat-head"><div><strong>R.R Landscaping</strong><span>Usually replies instantly</span></div><button onClick={() => setChatOpen(false)} aria-label="Close chat"><X size={17} /></button></div><div className="chat-body"><div className="chat-bubble">Hi there. How can we help make your outdoor space feel more like you?</div>{sent && <div className="chat-bubble user-bubble">{message}</div>}</div><div className="chat-compose"><input value={message} onChange={e => setMessage(e.target.value)} onKeyDown={e => { if (e.key === 'Enter' && !e.nativeEvent.isComposing && e.keyCode !== 229 && message.trim()) { setSent(true); setMessage('') } }} placeholder="Type a message..." aria-label="Chat message" /><button onClick={() => { if (message.trim()) { setSent(true); setMessage('') } }} aria-label="Send message"><Send size={16} /></button></div></div>}
     </main>
   )
 }

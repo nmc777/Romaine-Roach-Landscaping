@@ -131,3 +131,5 @@ export const whyUs: Faq[] = [
 export const MAP_QUERY = 'Tecumseh, Ontario'
 export const MAP_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(MAP_QUERY)}&z=10&output=embed`
 export const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`
+
+export const areaSlug = (name: string) => `${name.toLowerCase().replace(/[^a-z]+/g, '-')}-landscaping`

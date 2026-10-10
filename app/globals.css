@@ -100,7 +100,7 @@ a { color: inherit; }
 .areas-grid h2 { font-size: clamp(44px, 5vw, 70px); line-height: .95; letter-spacing: -.055em; margin: 0; }
 .areas-copy p { color: #65736b; font-size: 16px; line-height: 1.7; margin: 0 0 18px; }
 .areas-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-.area-card { background: #f7f8f2; padding: 24px; transition: transform .25s ease, box-shadow .25s ease; }
+.area-card { display: block; text-decoration: none; color: inherit; background: #f7f8f2; padding: 24px; transition: transform .25s ease, box-shadow .25s ease; }
 .area-card:hover { transform: translateY(-5px); box-shadow: 0 16px 32px rgba(20,40,30,.14); }
 .area-card h3 { font-size: 22px; margin: 0 0 10px; color: var(--forest); }
 .area-card p { margin: 0; color: #65736b; font-size: 13px; line-height: 1.55; }

@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { ArrowRight, ChevronDown, Menu, X } from 'lucide-react'
-import { services } from '@/lib/site'
+import { areas, areaSlug, services } from '@/lib/site'
 
 export function SiteNav() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -39,7 +39,7 @@ export function SiteFooter() {
       <div className="footer-top">
         <div className="footer-brand"><div className="brand"><span className="brand-mark">RR</span><span>LANDSCAPING</span></div><p>Thoughtful landscaping for considered homes across Windsor-Essex.</p></div>
         <div className="footer-col"><h4>Services</h4>{services.map((s) => <Link key={s.slug} href={`/services/${s.slug}`}>{s.name}</Link>)}</div>
-        <div className="footer-col"><h4>Company</h4><Link href="/">Home</Link><Link href="/#story">Our approach</Link><Link href="/#areas">Areas we serve</Link><Link href="/#contact">Contact</Link></div>
+        <div className="footer-col"><h4>Company</h4><Link href="/">Home</Link><Link href="/#story">Our approach</Link><Link href="/#areas">Areas we serve</Link>{areas.map((a) => <Link key={a.name} href={`/${areaSlug(a.name)}`}>{a.name} landscaping</Link>)}<Link href="/#contact">Contact</Link></div>
         <div className="footer-col"><h4>Get in touch</h4><a href="mailto:hello@aitheyardguy.ca">hello@aitheyardguy.ca</a><span>Windsor-Essex, Ontario</span></div>
       </div>
       <div className="footer-bottom"><span className="footer-copy">© 2026 R.R Landscaping</span><span className="footer-copy">Est. 2023</span></div>

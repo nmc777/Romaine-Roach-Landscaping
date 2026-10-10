@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { SiteNav, SiteFooter } from '@/components/site-chrome'
-import { areas, areaList, services, whyUs, MAP_EMBED, MAP_LINK } from '@/lib/site'
+import { areas, areaSlug, areaList, services, whyUs, MAP_EMBED, MAP_LINK } from '@/lib/site'
 import { ArrowRight, CalendarDays, Check, ChevronDown, ChevronLeft, ChevronRight, Clock3, Leaf, Menu, MessageCircle, Send, Snowflake, Sparkles, X } from 'lucide-react'
 
 const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
@@ -67,7 +67,7 @@ export default function Page() {
           <div><p className="eyebrow">AREAS WE SERVE</p><h2 id="areas-heading">Proudly local to<br /><em>Windsor-Essex.</em></h2></div>
           <div className="areas-copy"><p>R.R Landscaping is a local landscaping and yard care company serving homeowners across Windsor-Essex. We work in {areaList}, and the communities in between.</p><p>Being local means we know the area: the soil, the seasons, and the lake-effect weather that shapes how a yard should be looked after. If you are not sure whether we cover your street, just ask.</p></div>
         </div>
-        <div className="areas-list">{areas.map((a) => <div className="area-card" key={a.name}><h3>{a.name}</h3><p>{a.note}</p></div>)}</div>
+        <div className="areas-list">{areas.map((a) => <Link className="area-card" key={a.name} href={`/${areaSlug(a.name)}`}><h3>{a.name}</h3><p>{a.note}</p></Link>)}</div>
               <div className="map-wrap"><iframe title="R.R Landscaping service area map, Tecumseh and Windsor-Essex" src={MAP_EMBED} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /><a className="map-link" href={MAP_LINK} target="_blank" rel="noopener noreferrer">Open in Google Maps <ArrowRight size={14} /></a></div>
       </section>
 

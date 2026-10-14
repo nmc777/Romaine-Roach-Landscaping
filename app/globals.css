@@ -179,3 +179,7 @@ a { color: inherit; }
 @media (max-width: 700px) { .review-card { flex-basis: min(82vw, 350px); } }
 
 .top-bar { background: var(--lime); color: var(--ink); text-align: center; padding: 9px 5vw; font-size: 11px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+.review-text { padding: 34px 30px; min-height: 240px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px; }
+.review-text p { margin: 0; font-size: 17px; line-height: 1.65; color: var(--ink); }
+.review-text strong { color: var(--forest); }
+.review-text span { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #65736b; }
